@@ -1,0 +1,22 @@
+html{
+    --visibility:hidden;
+    --buttonVisibility:hidden;
+}
+
+.step{
+    background-color: aquamarine;
+    color: black;
+}
+
+#popup{
+    visibility: var(--visibility);
+    position: fixed;
+    z-index: 999999999;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#shop{
+    visibility: var(--buttonVisibility);
+    background-color: aquamarine;
+}

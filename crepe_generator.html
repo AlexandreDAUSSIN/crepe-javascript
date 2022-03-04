@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Crepe Party Generator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="crepe_generator.css">
+    <script defer src="crepe_generator.js"></script>
+</head>
+
+<body>
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card bg-dark text-white spawn" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+
+                            <div class="mb-md-2 mt-md-4 pb-3">
+                                <form onsubmit="return calcul(event);">
+
+                                    <h1 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">
+                                        <strong>Crepe Party Generator</strong>
+                                    </h1>
+                                    <div class="row">
+                                        <div class="col form-outline form-dark mb-4">
+                                            <input id="value" type="number" value="1" class="gens" onchange="calcul()"/>
+                                            <label for="value">Nombre de personnes</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <p>
+                                                <span id="farine">63</span> g de farine <img
+                                                    src="https://img.icons8.com/ios-glyphs/25/000000/sack-of-flour.png" 
+                                                    alt="sac de farine"/>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p>
+                                                <span id="oeuf">1</span> oeuf(s) <img
+                                                    src="https://img.icons8.com/ios-glyphs/25/000000/egg.png" 
+                                                    alt="oeuf"/>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p>
+                                                <span id="lait">0.2</span> cl de lait <img
+                                                    src="https://img.icons8.com/glyph-neue/25/000000/milk.png" 
+                                                    alt="lait"/>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p>
+                                                <span class="sucre" id="sucre">0.5</span> cuillère(s) à soupe de sucre <img
+                                                    src="https://img.icons8.com/ios-filled/25/000000/icing-sugar.png" 
+                                                    alt="sucre"/>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p>
+                                                <span id="beurre">13</span> g de beurre <img
+                                                    src="https://img.icons8.com/fluency-systems-filled/25/000000/butter.png" 
+                                                    alt="beurre"/>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row bateau">
+                                        <div class="pt-1 mb-4">
+                                            <button class="btn-lg btn-primary animated-border-button" type="button"
+                                                onclick='liste()'><strong>Liste de courses</strong></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card bg-dark text-white spawn" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+
+                            <div class="mb-md-2 mt-md-4 pb-3">
+                                <form onsubmit="return calcul(event);">
+
+                                    <h1 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">
+                                        <strong>Recette step by step</strong>
+                                    </h1>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="step">Étape 1 
+                                                <img src="https://img.icons8.com/ios-glyphs/25/000000/sack-of-flour.png" 
+                                                alt="sac de farine"/>
+                                            </p>
+                                            <p>Mettre la farine dans un saladier et former un puits.</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="step">Étape 2
+                                                <img src="https://img.icons8.com/ios-glyphs/25/000000/egg.png" 
+                                                alt="oeuf"/>
+                                                <img src="https://img.icons8.com/ios-filled/25/000000/icing-sugar.png" 
+                                                alt="sucre"/>
+                                                <img src="https://img.icons8.com/fluency-systems-filled/25/000000/butter.png" 
+                                                alt="beurre"/>
+                                            </p>
+                                            <p>Y déposer les oeufs entiers, le sucre et le beurre.</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="step">Étape 3
+                                                <img src="https://img.icons8.com/glyph-neue/25/000000/milk.png" 
+                                                alt="lait"/>
+                                            </p>
+                                            <p>Mélanger délicatement avec un fouet en ajoutant au fur et à mesure le lait. La pâte ainsi obtenue doit avoir une consistance d'un liquide légèrement épais. </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="step">Étape 4</p>
+                                            <p>Faire chauffer une poêle antiadhésive et y verser une louche de pâte, la répartir dans la poêle puis attendre qu'elle soit cuite d'un côté avant de la retourner. Cuire ainsi toutes les crêpes à feu doux.</p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="popup" class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card bg-dark text-white spawn" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+
+                            <div class="mb-md-2 mt-md-4 pb-3">
+                                    <h1 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">
+                                        <strong>Courses</strong>
+                                    </h1>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="step">Votre liste de course est :  </p>
+                                            <p id="achatFarine">1</p>
+                                            <p id="achatOeuf">2</p>
+                                            <p id="achatLait">3</p>
+                                            <p id="achatBeurre">4</p>
+                                        </div>
+                                    </div>
+                                    <div class="row bateau">
+                                        <div class="pt-1 mb-4">
+                                            <button id="shopBouton" class="btn-lg btn-primary animated-border-button" type="button"><strong>Acheter</strong></button>
+                                            <button id="closeBouton" class="btn-lg btn-primary animated-border-button" type="button"><strong>Fermer</strong></button>
+                                        </div>
+                                        <div class="pt-1 mb-4">
+                                            <button id="shop" class="btn-lg btn-primary animated-border-button" type="button"><a href="https://www.carrefour.fr/services/courses-en-ligne?gclid=CjwKCAiAjoeRBhAJEiwAYY3nDOOBoN7rhrPv2toHAWXwVqsW8p6cj6hpDsnkr7uRAigU4Ihvep3NzBoCer0QAvD_BwE&gclsrc=aw.ds" target="_blank"><strong>Carrefour</strong></a></button>
+                                            <button id="shop" class="btn-lg btn-primary animated-border-button" type="button"><a href="https://www.leclercdrive.fr/" target="_blank"><strong>Leclerc</strong></a></button>
+                                            <button id="shop" class="btn-lg btn-primary animated-border-button" type="button"><a href="https://www.coursesu.com/drive/home#utm_medium=cpc&utm_source=google&utm_campaign=EnseignesGeneriques&utm_content={adgroup}&utm_term=super%20u%20drive&s_kwcid=AL!7209!3!315619685207!e!!g!!super%20u%20drive" target="_blank"><strong>SuperU</strong></a></button>
+                                            <button id="shop" class="btn-lg btn-primary animated-border-button" type="button"><a href="https://www.auchan.fr/courses" target="_blank"><strong>Auchan</strong></a></button>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
