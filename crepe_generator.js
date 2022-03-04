@@ -1,3 +1,4 @@
+//Valeur par défaut pour 1 crêpe
 const Recette = {
     farine : [nb = 63, unite = "g"],
     oeuf : [nb = 1],
@@ -6,12 +7,14 @@ const Recette = {
     beurre : [nb = 13, unite = "g"]
 }
 
+//Différentes quantités en magasin
 const Magasin = {
     sacFarine : [500],
     packOeuf : [6],
     meutteBeurre : [200]
 }
 
+//Initialisation des variables
 let gens = document.getElementById("value");
 let farine;
 let oeuf;
@@ -19,6 +22,7 @@ let lait;
 let sucre;
 let beurre;
 
+//Fonction de calcul des quantités
 function calcul() {
     gens.value = parseInt(gens.value);
     farine = gens.value * Recette.farine[0];
@@ -33,6 +37,7 @@ function calcul() {
     document.getElementById("beurre").textContent = beurre;
 }
 
+//Fonction d'affichage de la liste de course
 function liste() {
     calcul();
     document.documentElement.style.setProperty('--visibility', "visible");
@@ -45,6 +50,7 @@ function liste() {
     document.getElementById("achatBeurre").textContent = Math.ceil(achatBeurre) + " meutte(s) de beurre";
 }
 
+//Gestion des boutons du menu de la liste
 let closeButton = document.getElementById("closeBouton");
 let shopButton = document.getElementById("shopBouton");
 
